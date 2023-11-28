@@ -1,0 +1,8 @@
+/docs/build/
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/ORAN_testbed_docs.iml
+/.idea/vcs.xml
+/testbed/*
