@@ -11,6 +11,8 @@ Welcome to UnB O-RAN Testbed Documentation's documentation!
    :caption: Contents:
 
    container_tools
+   oran_components
+   automation
 
 
 Indices and tables
