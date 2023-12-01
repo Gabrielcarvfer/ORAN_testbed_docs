@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'UnB O-RAN Testbed Documentation'
+project = 'UnB O-RAN Testbed'
 copyright = '2023, Gabriel Ferreira, Matheus Oliveira, Lucas Costa'
 author = 'Gabriel Ferreira, Matheus Oliveira, Lucas Costa'
 
