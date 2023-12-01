@@ -337,8 +337,8 @@ delete that service deployment with ``kubectl delete service deployment_name``.
 
 As we can see, the service is gone.
 
-Removing a deployed
--------------------
+Removing a deployment
+---------------------
 
 The deployed pods will continue to run, just not be exposed. If you want
 to remove them too, delete the deployment with ``kubectl delete deployment deployment_name``.
