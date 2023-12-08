@@ -56,7 +56,7 @@ We can simply search then install via Helm, which will fetch charts available at
 
 By looking at the `binami URL entry for nginx`_, we can get the installation instructions:
 
-.. image:: img/bitnami_nginx.png
+.. image:: img/bitnami-nginx.png
    :width: 100%
 
 We follow the instructions, adding the new chart repository with ``helm repo add repo_name repo_url``
@@ -123,7 +123,7 @@ Since we are already working on the nginx example, we are going to continue with
 By looking at the `binami URL entry for nginx`_, we can look at the different
 configuration templates included in the Helm chart.
 
-.. image:: img/bitnami_nginx_templates.png
+.. image:: img/bitnami-nginx-templates.png
    :width: 100%
 
 We can also probe the configuration via the command line using ``helm get manifest deployment_name``.
@@ -206,7 +206,7 @@ On top of that, we also have the environment variable ``NGINX_HTTP_PORT_NUMBER``
 By looking at the `binami URL entry for nginx`_, we can search for the variable names
 that replace that get replaced by those values.
 
-.. image:: img/bitnami_nginx_templates_ports.png
+.. image:: img/bitnami-nginx-templates-ports.png
    :width: 100%
 
 In the previous image, we can see that the ``.Values.containerPorts.http`` variable
@@ -430,7 +430,7 @@ First we change the application version in ``Chart.yaml``. This ``appVersion`` r
 being encapsulated, and not the chart that encapsulates it. For this, there is a separate ``version``
 entry that can be incremented in case Helm-specifics need some touch-ups.
 
-.. sourcecode:: console
+.. sourcecode:: yaml
 
     apiVersion: v2
     name: mychart

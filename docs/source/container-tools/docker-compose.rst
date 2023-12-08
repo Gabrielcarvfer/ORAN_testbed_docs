@@ -435,7 +435,7 @@ wizard on ``localhost:8080``.
 
 We can see that both services were started and that wordpress connected with the MySQL database.
 
-.. image:: img/wordpress_wizard.png
+.. image:: img/wordpress-wizard.png
    :width: 60%
 
 After registering the wordpress site as ``umsite`` and the user as ``umusuario`` via the online

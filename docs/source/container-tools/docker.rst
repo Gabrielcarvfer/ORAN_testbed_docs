@@ -48,7 +48,7 @@ Ubuntu, for example, has multiple containers, one for each release
 (``20.04``, ``22.04``, ``23.04``, ``23.10``), plus additional tags
 for ``latest`` and ``rolling``.
 
-.. image:: img/ubuntu_docker_hub_page.png
+.. image:: img/ubuntu-docker-hub-page.png
    :width: 100%
 
 To download one of the ubuntu images, ``docker image pull`` specifying
@@ -246,7 +246,7 @@ To hop into the terminal of the container and interact with the server container
 
 After installing ``htop`` and running it, we get the list of running processes within the container.
 
-.. image:: img/nginx_container_htop.png
+.. image:: img/nginx-container-htop.png
    :width: 100%
 
 After finishing our work, we can exit the container with a simple ``exit`` command.

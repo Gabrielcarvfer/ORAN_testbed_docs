@@ -10,9 +10,10 @@ Welcome to UnB O-RAN Testbed's documentation!
    :maxdepth: 3
    :caption: Contents:
 
-   container_tools
-   oran_components
-   automation
+   container-tools
+   oran-components
+   setup-tools
+   sysadmin
 
 
 Indices and tables
