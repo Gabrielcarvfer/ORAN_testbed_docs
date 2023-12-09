@@ -12,6 +12,7 @@ Welcome to UnB O-RAN Testbed's documentation!
 
    container-tools
    oran-components
+   ml-components
    setup-tools
    sysadmin
 
