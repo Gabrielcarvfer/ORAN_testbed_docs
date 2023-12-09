@@ -146,6 +146,67 @@ For administrators, we get there using:
     ubuntu@testvm:~$ exit
     $
 
+Sharing files to/from a VM
+--------------------------
+
+Like Docker, Multipass allows us to mount shared volumes.
+Let's see it in action.
+
+.. sourcecode:: console
+
+    $ multipass mount ./ testvm:/home/ubuntu/multipass
+    $ ls
+    $ multipass exec testvm -- bash
+    ubuntu@testvm:~/multipass/$ ls
+    ubuntu@testvm:~/multipass/$ echo "Hello world!" > test.txt
+    ubuntu@testvm:~/multipass/$ ls
+    test.txt
+    ubuntu@testvm:~/multipass/$ exit
+    $ ls
+    test.txt
+    $ cat test.txt
+    Hello world!
+
+As we can see, we have access to the shared directory via both sides.
+
+Unsharing files to/from a VM
+----------------------------
+
+Shared directories will persist and need to be manually removed
+if sharing is only meant for copying configuration files and such.
+
+To unshare a directory, use the following.
+
+.. sourcecode:: console
+
+    $ multipass info testvm
+    Name:           testvm
+    State:          Running
+    IPv4:           10.142.101.175
+    Release:        Ubuntu 20.04.6 LTS
+    Image hash:     f5cdf6bf458b (Ubuntu 20.04 LTS)
+    CPU(s):         8
+    Load:           0.21 0.05 0.02
+    Disk usage:     1.5GiB out of 9.6GiB
+    Memory usage:   218.2MiB out of 9.7GiB
+    Mounts:         /host/directory => /home/ubuntu/multipass
+                    UID map: 1000:default
+                    GID map: 1000:default
+    $ multipass unmount testvm:/home/ubuntu/multipass
+    $ multipass info testvm
+    Name:           testvm
+        State:          Running
+        IPv4:           10.142.101.175
+        Release:        Ubuntu 20.04.6 LTS
+        Image hash:     f5cdf6bf458b (Ubuntu 20.04 LTS)
+        CPU(s):         8
+        Load:           0.21 0.05 0.02
+        Disk usage:     1.5GiB out of 9.6GiB
+        Memory usage:   218.2MiB out of 9.7GiB
+        Mounts:         --
+
+Pretty neat, ain't it?
+
 Removing a VM
 -------------
 
