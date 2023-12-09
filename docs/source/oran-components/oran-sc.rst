@@ -1,4 +1,4 @@
-O-RAN SC components
-===================
+O-RAN SC
+========
 
 TODO

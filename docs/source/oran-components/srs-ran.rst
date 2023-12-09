@@ -1,4 +1,4 @@
-SRS-RAN Components
-==================
+SRS-RAN
+=======
 
 TODO

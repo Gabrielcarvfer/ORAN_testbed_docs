@@ -1,5 +1,7 @@
-Docker: high-quality drop shipping
-==================================
+Docker
+======
+
+**Docker: high-quality drop shipping**
 
 .. _Docker Website: https://docs.docker.com/get-started/overview/
 

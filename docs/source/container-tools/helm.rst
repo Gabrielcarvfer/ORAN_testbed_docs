@@ -1,5 +1,7 @@
-Helm: containers + configuration templates = business
-=====================================================
+Helm
+====
+
+**Helm: containers + configuration templates = business**
 
 One of the biggest limitations of Docker container images is that they encapsulate the
 application, but not the controls of said application. That means it says nothing about

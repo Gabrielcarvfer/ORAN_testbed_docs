@@ -1,5 +1,7 @@
-Docker-compose: better together
-===============================
+Docker-compose
+==============
+
+**Docker-compose: better together**
 
 Docker containers are super powerful when isolated, but even more powerful when user together.
 However, setting up the relationship and managing containers can get very messy very quickly.

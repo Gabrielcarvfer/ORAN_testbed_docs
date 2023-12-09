@@ -1,5 +1,7 @@
-Kubernetes: release the kraken!
-===============================
+Kubernetes
+==========
+
+**Kubernetes: release the kraken!**
 
 .. _Kubernetes: https://kubernetes.io/docs/tutorials/kubernetes-basics/
 .. _Docker Swarm: https://docs.docker.com/engine/swarm/
