@@ -39,9 +39,7 @@ and `microk8s`_ (a Kubernetes cluster). For Ubuntu, use the following commands:
 Since we are using ``microk8s``, and kubectl is shipped with it,
 we can use ``microk8s kubectl`` or define an alias to skip ``microk8s`` part.
 
-To set up the alias permanently for a given user, write ``alias kubectl="microk8s kubectl"``
-to your ``~/.bashrc`` file. After doing that, you need to refresh your terminal session,
-which can be done either closing and re-opening the terminal or via ``source ~/.bashrc``.
+To set up the alias permanently, write ``sudo snap alias microk8s.kubectl kubectl``.
 
 The entire procedure can be done via the terminal as follows:
 
@@ -49,8 +47,7 @@ The entire procedure can be done via the terminal as follows:
 
     $ kubectl
     bash: /snap/bin/kubectl: No such file or directory
-    $ echo 'alias kubectl="microk8s kubectl"' >> ~/.bashrc
-    $ source ~/.bashrc
+    $ sudo snap alias microk8s.kubectl kubectl
     $ kubectl
     kubectl controls the Kubernetes cluster manager.
     ...

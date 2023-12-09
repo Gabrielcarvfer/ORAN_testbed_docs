@@ -19,8 +19,7 @@ like we did for ``kubectl``.
     $ helm
     Command 'helm' not found, but can be installed with:
     sudo snap install helm
-    $ echo 'alias helm="microk8s helm"' >> ~/.bashrc
-    $ source ~/.bashrc
+    $ sudo snap alias microk8s.helm3 helm
     $ helm
     The Kubernetes package manager
 
