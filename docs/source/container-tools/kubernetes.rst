@@ -285,6 +285,14 @@ In the case of microk8s, the cluster is hosted in a VM, that you can get the IP 
     NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
     kubernetes   ClusterIP   10.152.183.1   <none>        443/TCP   20h
 
+To get just the service IP address, use
+``kubectl get service service_name --namespace service_namespace -o jsonpath='{.spec.clusterIP}'``.
+
+.. sourcecode:: console
+
+    $ kubectl get service kubernetes -o jsonpath='{.spec.clusterIP}'
+    10.152.183.1
+
 To expose our server, like we did in docker using port mappings, we need to use
 ``kubectl expose deployment deployment_name --type=LoadBalancer --port=internal_port_to_expose``.
 
