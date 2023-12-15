@@ -14,6 +14,7 @@ Welcome to UnB O-RAN Testbed's documentation!
    oran-components
    ml-components
    setup-tools
+   meta
    sysadmin
 
 
