@@ -23,6 +23,44 @@ the command ``snap install multipass``.
     [sudo] password for username:
     multipass 1.12.2 from Canonical✓ installed
 
+If we are not the sole user of the machine, we may want to
+set passphrases to limit which users can actually manipulate
+the multipass VMs. We see how to do that next.
+
+Managing multipass access in multi-user environments
+----------------------------------------------------
+
+Doing this is just as easy as 1-2-3:
+
+- Get to the root shell (``sudo su``)
+- Set a passphrase (``multipass set local.passphrase``)
+- Reset the multipassd service to apply changes (``snap restart multipass.multipassd``)
+
+After exiting the root shell, you will be able to
+authenticate (``multipass auth``) then probe multipass services.
+
+Let's see an hypothetical example, where the passphrase is set to ``1``.
+
+.. sourcecode:: console
+
+    $ multipass list
+    exec failed: The client is not authenticated with the Multipass service.
+    Please use 'multipass authenticate' before proceeding.
+    exec failed: The client is not authenticated with the Multipass service.
+    Please use 'multipass authenticate' before proceeding.
+    $ sudo su
+    root$ multipass set local.passphrase
+    root$ snap restart multipass.multipassd
+    root$ exit
+    $ multipass list
+    exec failed: The client is not authenticated with the Multipass service.
+    Please use 'multipass authenticate' before proceeding.
+    exec failed: The client is not authenticated with the Multipass service.
+    Please use 'multipass authenticate' before proceeding.
+    $ multipass auth 1
+    $ multipass list
+    Name                    State             IPv4             Image
+
 Now we can see the available images to instantiate a VM.
 
 Looking for images to instantiate a VM
